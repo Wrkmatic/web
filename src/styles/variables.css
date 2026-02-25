@@ -1,0 +1,72 @@
+/* ============================================================
+   CSS CUSTOM PROPERTIES — WRKMATIC DESIGN SYSTEM
+   Apple-precision minimalism | Subtle liquid glass accents
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+
+:root {
+  /* ── Backgrounds ── */
+  --bg-light: #F5F5F7;
+  --bg-dark:  #0A0A0A;
+  --bg-mid:   #1D1D1F;
+
+  /* ── Typography colours ── */
+  --text-primary:   #1D1D1F;
+  --text-secondary: #6E6E73;
+  --text-light:     #F5F5F7;
+  --text-muted:     #86868B;
+
+  /* ── Accent — one colour, used sparingly ── */
+  --accent-blue:       #0071E3;
+  --accent-blue-hover: #0077ED;
+
+  /* ── Liquid glass ── */
+  --glass-bg:           rgba(255, 255, 255, 0.08);
+  --glass-border:       rgba(255, 255, 255, 0.12);
+  --glass-bg-light:     rgba(255, 255, 255, 0.72);
+  --glass-border-light: rgba(0, 0, 0, 0.08);
+
+  /* ── Font stack ──
+     SF Pro on Apple devices, DM Sans everywhere else      */
+  --font-display: 'SF Pro Display', 'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-text:    'SF Pro Text',    'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  /* ── Type scale ── */
+  --text-hero:  clamp(3rem, 7vw, 6rem);
+  --text-h1:    clamp(2.2rem, 4.5vw, 3.5rem);
+  --text-h2:    clamp(1.6rem, 3vw, 2.4rem);
+  --text-h3:    clamp(1.2rem, 2vw, 1.6rem);
+  --text-body:  1.0625rem;
+  --text-small: 0.875rem;
+  --text-label: 0.75rem;
+
+  /* ── Leading / tracking ── */
+  --leading-tight:  1.1;
+  --leading-body:   1.65;
+  --tracking-label: 0.08em;
+  --tracking-tight: -0.02em;
+
+  /* ── Layout ── */
+  --container-max:     1120px;
+  --container-padding: clamp(1.5rem, 5vw, 3rem);
+  --section-py:        clamp(4rem, 10vw, 7.5rem);
+
+  /* ── Shape ── */
+  --radius-card: 12px;
+  --radius-pill: 980px;
+  --radius-sm:   6px;
+
+  /* ── Shadow ── */
+  --shadow-card:    0 2px 20px rgba(0, 0, 0, 0.06);
+  --shadow-card-lg: 0 8px 40px rgba(0, 0, 0, 0.10);
+
+  /* ── Motion ── */
+  --ease-out:        cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+
+  /* ── Z-index ── */
+  --z-navbar:  100;
+  --z-overlay: 200;
+}

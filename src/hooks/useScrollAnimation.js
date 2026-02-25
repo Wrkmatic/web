@@ -1,8 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
-export function useScrollAnimation(threshold = 0.12) {
+/**
+ * Adds 'is-visible' to the returned ref's element when it enters
+ * the viewport. Pair with the .reveal CSS class for the fade-up effect.
+ */
+const useScrollAnimation = ({ threshold = 0.12, rootMargin = '0px 0px -40px 0px' } = {}) => {
   const ref = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
@@ -11,16 +14,18 @@ export function useScrollAnimation(threshold = 0.12) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
+          el.classList.add('is-visible');
           observer.unobserve(el);
         }
       },
-      { threshold }
+      { threshold, rootMargin }
     );
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, [threshold]);
+  }, [threshold, rootMargin]);
 
-  return [ref, isVisible];
-}
+  return ref;
+};
+
+export default useScrollAnimation;

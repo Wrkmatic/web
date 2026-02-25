@@ -1,31 +1,35 @@
-import './App.css';
-import StickyHeader from './components/StickyHeader';
-import HeroSection from './components/HeroSection';
-import ProblemSection from './components/ProblemSection';
-import SolutionSection from './components/SolutionSection';
-import HowItWorksSection from './components/HowItWorksSection';
-import SocialProofSection from './components/SocialProofSection';
-import DifferentiationSection from './components/DifferentiationSection';
-import FAQSection from './components/FAQSection';
-import FinalCTASection from './components/FinalCTASection';
-import Footer from './components/Footer';
+/* ============================================================
+   APP ROOT
+   Sets up React Router. Navbar and Footer wrap every route.
+   Add new pages here as <Route> entries.
+   ============================================================ */
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Navbar      from './components/layout/Navbar';
+import Footer      from './components/layout/Footer';
+
+import HomePage    from './pages/HomePage';
+import ServicesPage from './pages/ServicesPage';
+import AboutPage   from './pages/AboutPage';
+import DemosPage   from './pages/DemosPage';
+import ContactPage from './pages/ContactPage';
+
+import './styles/globals.css';
 
 function App() {
   return (
-    <>
-      <StickyHeader />
-      <main>
-        <HeroSection />
-        <ProblemSection />
-        <SolutionSection />
-        <HowItWorksSection />
-        <SocialProofSection />
-        <DifferentiationSection />
-        <FAQSection />
-        <FinalCTASection />
-      </main>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/"        element={<HomePage />}     />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/about"   element={<AboutPage />}    />
+        <Route path="/demos"   element={<DemosPage />}    />
+        <Route path="/contact" element={<ContactPage />}  />
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 
