@@ -4,11 +4,6 @@ const HeroSection = () => (
   <section className="hero" aria-label="Hero">
     <div className="container hero__inner">
 
-      {/* Location badge — glass-light */}
-      <div className="hero__badge glass-light hero-animate hero-animate--d1">
-        Manchester, UK
-      </div>
-
       {/* Headline — light weight, large, fades up */}
       <h1 className="hero__headline hero-animate hero-animate--d2">
         Built for your business.{' '}
@@ -23,7 +18,7 @@ const HeroSection = () => (
 
       {/* Supporting line */}
       <p className="hero__supporting hero-animate hero-animate--d3">
-        Custom AI systems, tailor-made CRMs and lead generation — designed around
+        Custom AI Automations, lead generation and tailor-made softwate. All designed around
         how you work.
       </p>
 

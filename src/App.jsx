@@ -1,32 +1,36 @@
-/* ============================================================
-   APP ROOT
-   Sets up React Router. Navbar and Footer wrap every route.
-   Add new pages here as <Route> entries.
-   ============================================================ */
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 
-import Navbar      from './components/layout/Navbar';
-import Footer      from './components/layout/Footer';
-
-import HomePage    from './pages/HomePage';
+import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
-import AboutPage   from './pages/AboutPage';
-import DemosPage   from './pages/DemosPage';
+import DemosPage from './pages/DemosPage';
 import ContactPage from './pages/ContactPage';
 
 import './styles/globals.css';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behaviour: 'instant' }); // see note below
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/web/">
+      <ScrollToTop />
       <Navbar />
       <Routes>
-        <Route path="/"        element={<HomePage />}     />
+        <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<ServicesPage />} />
-        <Route path="/about"   element={<AboutPage />}    />
-        <Route path="/demos"   element={<DemosPage />}    />
-        <Route path="/contact" element={<ContactPage />}  />
+        <Route path="/demos" element={<DemosPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>

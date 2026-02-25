@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import useScrollAnimation from '../hooks/useScrollAnimation';
-import ImagePlaceholder from '../components/placeholders/ImagePlaceholder';
 
 const SERVICES = [
   {
@@ -74,6 +73,205 @@ const SERVICES = [
   },
 ];
 
+/* ── Inline SVG illustrations ── */
+
+const AIAutomationSVG = () => (
+  <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true" className="service-svg">
+    {/* Input nodes (left column) */}
+    <rect x="10" y="60" width="72" height="44" rx="7"
+      stroke="#0071E3" strokeWidth="1.5" fill="rgba(0,113,227,0.05)" opacity="0.7" />
+    <rect x="22" y="75" width="48" height="8" rx="4" fill="#0071E3" opacity="0.35" />
+    <rect x="22" y="89" width="36" height="6" rx="3" fill="#0071E3" opacity="0.2" />
+
+    <rect x="10" y="128" width="72" height="44" rx="7"
+      stroke="#0071E3" strokeWidth="1.5" fill="rgba(0,113,227,0.05)" opacity="0.7" />
+    <rect x="22" y="143" width="48" height="8" rx="4" fill="#0071E3" opacity="0.35" />
+    <rect x="22" y="157" width="36" height="6" rx="3" fill="#0071E3" opacity="0.2" />
+
+    <rect x="10" y="196" width="72" height="44" rx="7"
+      stroke="#0071E3" strokeWidth="1.5" fill="rgba(0,113,227,0.05)" opacity="0.7" />
+    <rect x="22" y="211" width="48" height="8" rx="4" fill="#0071E3" opacity="0.35" />
+    <rect x="22" y="225" width="36" height="6" rx="3" fill="#0071E3" opacity="0.2" />
+
+    {/* Arrows: inputs → AI Core */}
+    <line x1="82" y1="82" x2="148" y2="148" stroke="#0071E3" strokeWidth="1.25" opacity="0.4" strokeDasharray="4 3" />
+    <line x1="82" y1="150" x2="148" y2="150" stroke="#0071E3" strokeWidth="1.25" opacity="0.4" strokeDasharray="4 3" />
+    <line x1="82" y1="218" x2="148" y2="152" stroke="#0071E3" strokeWidth="1.25" opacity="0.4" strokeDasharray="4 3" />
+
+    {/* AI Core — central larger node */}
+    <rect x="148" y="96" width="104" height="108" rx="10"
+      stroke="#0071E3" strokeWidth="2" fill="rgba(0,113,227,0.08)" opacity="0.9" />
+    {/* Grid inside AI core */}
+    <rect x="164" y="114" width="72" height="72" rx="5"
+      stroke="#0071E3" strokeWidth="1" fill="rgba(0,113,227,0.05)" opacity="0.6" />
+    <line x1="164" y1="138" x2="236" y2="138" stroke="#0071E3" strokeWidth="0.75" opacity="0.3" />
+    <line x1="164" y1="162" x2="236" y2="162" stroke="#0071E3" strokeWidth="0.75" opacity="0.3" />
+    <line x1="188" y1="114" x2="188" y2="186" stroke="#0071E3" strokeWidth="0.75" opacity="0.3" />
+    <line x1="212" y1="114" x2="212" y2="186" stroke="#0071E3" strokeWidth="0.75" opacity="0.3" />
+    {/* Highlight dot */}
+    <circle cx="188" cy="138" r="5" fill="#0071E3" opacity="0.55" />
+
+    {/* Arrows: AI Core → outputs */}
+    <line x1="252" y1="128" x2="308" y2="88" stroke="#0071E3" strokeWidth="1.25" opacity="0.5" />
+    <polygon points="304,82 314,90 303,94" fill="#0071E3" opacity="0.5" />
+
+    <line x1="252" y1="150" x2="308" y2="150" stroke="#0071E3" strokeWidth="1.25" opacity="0.5" />
+    <polygon points="305,145 315,150 305,155" fill="#0071E3" opacity="0.5" />
+
+    <line x1="252" y1="172" x2="308" y2="212" stroke="#0071E3" strokeWidth="1.25" opacity="0.5" />
+    <polygon points="304,208 314,216 303,220" fill="#0071E3" opacity="0.5" />
+
+    {/* Output nodes (right column) */}
+    <rect x="316" y="58" width="72" height="44" rx="7"
+      stroke="#0071E3" strokeWidth="1.5" fill="rgba(0,113,227,0.06)" opacity="0.8" />
+    <rect x="328" y="73" width="48" height="8" rx="4" fill="#0071E3" opacity="0.4" />
+    <rect x="328" y="87" width="36" height="6" rx="3" fill="#0071E3" opacity="0.2" />
+
+    <rect x="316" y="128" width="72" height="44" rx="7"
+      stroke="#0071E3" strokeWidth="1.5" fill="rgba(0,113,227,0.06)" opacity="0.8" />
+    <rect x="328" y="143" width="48" height="8" rx="4" fill="#0071E3" opacity="0.4" />
+    <rect x="328" y="157" width="36" height="6" rx="3" fill="#0071E3" opacity="0.2" />
+
+    <rect x="316" y="198" width="72" height="44" rx="7"
+      stroke="#0071E3" strokeWidth="1.5" fill="rgba(0,113,227,0.06)" opacity="0.8" />
+    <rect x="328" y="213" width="48" height="8" rx="4" fill="#0071E3" opacity="0.4" />
+    <rect x="328" y="227" width="36" height="6" rx="3" fill="#0071E3" opacity="0.2" />
+  </svg>
+);
+
+const CustomSoftwareSVG = () => (
+  <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true" className="service-svg">
+    {/* Window frame */}
+    <rect x="16" y="16" width="368" height="268" rx="9"
+      stroke="#0071E3" strokeWidth="1.5" opacity="0.35" />
+
+    {/* Title bar */}
+    <rect x="16" y="16" width="368" height="38" rx="9"
+      stroke="#0071E3" strokeWidth="1" fill="rgba(0,113,227,0.05)" opacity="0.6" />
+    <circle cx="38" cy="35" r="4.5" stroke="#0071E3" strokeWidth="1.5" opacity="0.5" />
+    <circle cx="54" cy="35" r="4.5" stroke="#0071E3" strokeWidth="1.5" opacity="0.5" />
+    <circle cx="70" cy="35" r="4.5" stroke="#0071E3" strokeWidth="1.5" opacity="0.5" />
+
+    {/* Tab */}
+    <rect x="96" y="22" width="64" height="20" rx="4"
+      fill="rgba(0,113,227,0.1)" stroke="#0071E3" strokeWidth="1" opacity="0.5" />
+    <rect x="168" y="22" width="52" height="20" rx="4"
+      stroke="#0071E3" strokeWidth="1" opacity="0.2" />
+
+    {/* Sidebar */}
+    <rect x="16" y="54" width="88" height="230"
+      stroke="#0071E3" strokeWidth="1" fill="rgba(0,113,227,0.04)" opacity="0.4" />
+
+    {/* Sidebar items */}
+    <rect x="28" y="72" width="64" height="9" rx="4.5" fill="#0071E3" opacity="0.4" />
+    <rect x="28" y="93" width="54" height="9" rx="4.5" fill="#0071E3" opacity="0.22" />
+    <rect x="28" y="114" width="60" height="9" rx="4.5" fill="#0071E3" opacity="0.22" />
+    <rect x="28" y="135" width="48" height="9" rx="4.5" fill="#0071E3" opacity="0.18" />
+    <line x1="28" y1="162" x2="88" y2="162" stroke="#0071E3" strokeWidth="0.75" opacity="0.15" />
+    <rect x="28" y="174" width="52" height="9" rx="4.5" fill="#0071E3" opacity="0.15" />
+    <rect x="28" y="195" width="44" height="9" rx="4.5" fill="#0071E3" opacity="0.12" />
+
+    {/* Main content */}
+    {/* Top stat row */}
+    <rect x="114" y="62" width="78" height="52" rx="6"
+      stroke="#0071E3" strokeWidth="1.5" fill="rgba(0,113,227,0.04)" opacity="0.7" />
+    <rect x="204" y="62" width="78" height="52" rx="6"
+      stroke="#0071E3" strokeWidth="1.5" fill="rgba(0,113,227,0.04)" opacity="0.7" />
+    <rect x="294" y="62" width="74" height="52" rx="6"
+      stroke="#0071E3" strokeWidth="1.5" fill="rgba(0,113,227,0.04)" opacity="0.7" />
+    <rect x="126" y="76" width="40" height="14" rx="3" fill="#0071E3" opacity="0.4" />
+    <rect x="216" y="76" width="40" height="14" rx="3" fill="#0071E3" opacity="0.4" />
+    <rect x="306" y="76" width="40" height="14" rx="3" fill="#0071E3" opacity="0.4" />
+    <rect x="126" y="97" width="54" height="7" rx="3.5" fill="#0071E3" opacity="0.2" />
+    <rect x="216" y="97" width="54" height="7" rx="3.5" fill="#0071E3" opacity="0.2" />
+    <rect x="306" y="97" width="50" height="7" rx="3.5" fill="#0071E3" opacity="0.2" />
+
+    {/* Table header */}
+    <rect x="114" y="126" width="254" height="30" rx="5"
+      fill="rgba(0,113,227,0.07)" stroke="#0071E3" strokeWidth="1" opacity="0.5" />
+    <rect x="126" y="135" width="50" height="8" rx="4" fill="#0071E3" opacity="0.35" />
+    <rect x="210" y="135" width="40" height="8" rx="4" fill="#0071E3" opacity="0.25" />
+    <rect x="298" y="135" width="40" height="8" rx="4" fill="#0071E3" opacity="0.25" />
+
+    {/* Table rows */}
+    {[166, 192, 218, 244].map((y) => (
+      <g key={y}>
+        <line x1="114" y1={y} x2="368" y2={y}
+          stroke="#0071E3" strokeWidth="0.75" opacity="0.12" />
+        <rect x="126" y={y + 7} width="44" height="7" rx="3.5" fill="#0071E3" opacity="0.2" />
+        <rect x="210" y={y + 7} width="34" height="7" rx="3.5" fill="#0071E3" opacity="0.15" />
+        <rect x="298" y={y + 7} width="40" height="7" rx="3.5" fill="#0071E3" opacity="0.15" />
+      </g>
+    ))}
+  </svg>
+);
+
+const LeadGenerationSVG = () => (
+  <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true" className="service-svg">
+    {/* Prospect dots flowing in (top) */}
+    {[60, 100, 140, 180, 220, 260, 300, 340].map((x, i) => (
+      <circle key={x} cx={x} cy={22} r={5}
+        stroke="#0071E3" strokeWidth="1.5" opacity={0.15 + i * 0.03} />
+    ))}
+    {/* Down arrows from dots */}
+    {[80, 140, 200, 260, 320].map((x) => (
+      <line key={x} x1={x} y1={30} x2={x} y2={46}
+        stroke="#0071E3" strokeWidth="1" opacity="0.2" />
+    ))}
+
+    {/* Stage 1 — Awareness (wide) */}
+    <polygon points="60,50 340,50 310,110 90,110"
+      stroke="#0071E3" strokeWidth="1.5" fill="rgba(0,113,227,0.06)" opacity="0.75" />
+    <rect x="160" y="72" width="80" height="9" rx="4.5" fill="#0071E3" opacity="0.35" />
+    <rect x="175" y="87" width="50" height="7" rx="3.5" fill="#0071E3" opacity="0.2" />
+
+    {/* Gap line */}
+    <line x1="90" y1="114" x2="310" y2="114" stroke="#0071E3" strokeWidth="0.75" opacity="0.15" />
+
+    {/* Stage 2 — Qualification */}
+    <polygon points="90,118 310,118 274,178 126,178"
+      stroke="#0071E3" strokeWidth="1.5" fill="rgba(0,113,227,0.07)" opacity="0.8" />
+    <rect x="158" y="138" width="84" height="9" rx="4.5" fill="#0071E3" opacity="0.35" />
+    <rect x="170" y="153" width="60" height="7" rx="3.5" fill="#0071E3" opacity="0.22" />
+
+    {/* Gap line */}
+    <line x1="126" y1="182" x2="274" y2="182" stroke="#0071E3" strokeWidth="0.75" opacity="0.15" />
+
+    {/* Stage 3 — Conversion (narrow) */}
+    <polygon points="126,186 274,186 240,246 160,246"
+      stroke="#0071E3" strokeWidth="1.5" fill="rgba(0,113,227,0.09)" opacity="0.85" />
+    <rect x="158" y="204" width="84" height="9" rx="4.5" fill="#0071E3" opacity="0.4" />
+    <rect x="170" y="219" width="60" height="7" rx="3.5" fill="#0071E3" opacity="0.25" />
+
+    {/* Arrow at base */}
+    <line x1="200" y1="250" x2="200" y2="268"
+      stroke="#0071E3" strokeWidth="1.5" opacity="0.5" />
+    <polygon points="193,264 200,274 207,264" fill="#0071E3" opacity="0.5" />
+
+    {/* Output badge */}
+    <rect x="142" y="276" width="116" height="18" rx="9"
+      stroke="#0071E3" strokeWidth="1.5" fill="rgba(0,113,227,0.1)" opacity="0.8" />
+    <rect x="166" y="281" width="68" height="8" rx="4" fill="#0071E3" opacity="0.4" />
+
+    {/* Side percentage labels */}
+    <rect x="12" y="74" width="38" height="9" rx="4.5" fill="#0071E3" opacity="0.25" />
+    <rect x="12" y="140" width="38" height="9" rx="4.5" fill="#0071E3" opacity="0.3" />
+    <rect x="12" y="208" width="38" height="9" rx="4.5" fill="#0071E3" opacity="0.35" />
+    <line x1="50" y1="78" x2="60" y2="78" stroke="#0071E3" strokeWidth="1" opacity="0.2" strokeDasharray="3 2" />
+    <line x1="50" y1="144" x2="90" y2="144" stroke="#0071E3" strokeWidth="1" opacity="0.2" strokeDasharray="3 2" />
+    <line x1="50" y1="212" x2="126" y2="212" stroke="#0071E3" strokeWidth="1" opacity="0.2" strokeDasharray="3 2" />
+  </svg>
+);
+
+const SERVICE_SVGS = {
+  'ai-automation':  <AIAutomationSVG />,
+  'custom-software': <CustomSoftwareSVG />,
+  'lead-generation': <LeadGenerationSVG />,
+};
+
 const ServiceDetail = ({ service, index }) => {
   const ref = useScrollAnimation();
   const isAlt = index % 2 !== 0;
@@ -110,14 +308,10 @@ const ServiceDetail = ({ service, index }) => {
             <p className="service-detail__bottom-line">{service.bottomLine}</p>
           </div>
 
-          {/* Visual placeholder */}
+          {/* SVG illustration */}
           <div className="service-detail__visual">
-            <div className="service-detail__image-placeholder">
-              <ImagePlaceholder
-                id={`service-img-${service.id}`}
-                aspectRatio="4/3"
-                label={`[${service.label} illustration]`}
-              />
+            <div className="service-detail__svg-wrap">
+              {SERVICE_SVGS[service.id]}
             </div>
           </div>
 

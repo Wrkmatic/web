@@ -8,8 +8,6 @@ const ProblemSection = () => {
       <div className="container">
         <div className="problem__inner reveal" ref={ref}>
 
-          <span className="label label--light">Sound familiar?</span>
-
           <h2 className="problem__headline">
             Sound familiar?
           </h2>

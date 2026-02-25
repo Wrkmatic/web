@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wrkmatic</title>
+  <script>
+    // GitHub Pages SPA redirect
+    // Saves the full URL so index.html can restore it after loading
+    sessionStorage.setItem('spa-redirect', window.location.href);
+    window.location.replace(window.location.origin + '/web/');
+  </script>
+</head>
+<body></body>
+</html>

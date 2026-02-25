@@ -8,6 +8,17 @@
     <meta property="og:title" content="Wrkmatic — Intelligent Business Systems" />
     <meta property="og:description" content="Stop paying for software that doesn't fit. Custom CRMs, AI automation, and system integration built for your business." />
     <meta property="og:type" content="website" />
+    <script>
+      // Restore path after GitHub Pages 404 redirect
+      (function () {
+        var redirect = sessionStorage.getItem('spa-redirect');
+        if (redirect) {
+          sessionStorage.removeItem('spa-redirect');
+          var url = new URL(redirect);
+          window.history.replaceState(null, null, url.pathname + url.search + url.hash);
+        }
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">

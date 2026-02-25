@@ -29,10 +29,6 @@ const SolutionSection = () => {
             </p>
           </div>
 
-          <p className="solution__transition">
-            Here's what we build.
-          </p>
-
         </div>
       </div>
     </section>
