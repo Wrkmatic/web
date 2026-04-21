@@ -3,21 +3,39 @@ import useScrollAnimation from '../../hooks/useScrollAnimation';
 
 const SERVICES = [
   {
-    id:   'ai-automation',
-    name: 'AI Automation Systems',
-    body: 'Stop doing manually what a system can do for you.',
-    to:   '/services#ai-automation',
+    id:   'ai-outbound',
+    name: 'AI Cold Email & Outbound',
+    body: 'Automated outreach that books calls — not spam.',
+    to:   '/services#lead-generation',
   },
   {
-    id:   'custom-software',
-    name: 'Custom Software',
-    body: 'Software that fits your business. Not the other way around.',
+    id:   'crm-pipeline',
+    name: 'CRM & Sales Pipeline',
+    body: 'Built around your sales process. Not a template.',
     to:   '/services#custom-software',
   },
   {
-    id:   'lead-generation',
-    name: 'Lead Generation Systems',
-    body: 'A steady pipeline of the right people.',
+    id:   'ai-workflow',
+    name: 'AI Workflow Automation',
+    body: 'Replace manual admin with systems that run themselves.',
+    to:   '/services#ai-automation',
+  },
+  {
+    id:   'client-portals',
+    name: 'Custom Portals & Apps',
+    body: 'Dashboards and tools that fit how your team actually works.',
+    to:   '/services#custom-software',
+  },
+  {
+    id:   'integrations',
+    name: 'Integrations & Data Pipelines',
+    body: 'Connect the tools you already use. Move data where it needs to go.',
+    to:   '/services#ai-automation',
+  },
+  {
+    id:   'lead-nurture',
+    name: 'Lead Capture & Nurture',
+    body: 'Qualify prospects automatically. Follow up until they convert.',
     to:   '/services#lead-generation',
   },
 ];
