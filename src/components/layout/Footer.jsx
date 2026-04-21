@@ -14,7 +14,12 @@ const Footer = () => (
         {/* Brand */}
         <div>
           <Link to="/" className="footer__logo" aria-label="Wrkmatic — home">
-            Wrkmatic
+            <img
+              src={`${import.meta.env.BASE_URL}wrkmatic-logo-light.png`}
+              alt="Wrkmatic"
+              title="Wrkmatic"
+              className="footer__logo-img"
+            />
           </Link>
           <p className="footer__tagline">
             Built for your business. Not someone else's.

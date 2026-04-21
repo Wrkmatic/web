@@ -60,8 +60,8 @@ const DemosPage = () => {
             See what we've built. Hear from the businesses we've built it for.
           </h1>
           <p className="page-hero__sub page-hero__sub--dark">
-            Every system we've delivered started with a conversation. Here's where
-            some of those conversations ended up.
+            Real systems, real businesses, real outcomes. Here's what we shipped
+            and what changed.
           </p>
         </div>
       </section>
@@ -75,7 +75,7 @@ const DemosPage = () => {
             </h2>
             <p>
               Seeing is faster than explaining. Below are walkthroughs of systems
-              we've built — real software, real workflows, built for real businesses.
+              we've actually shipped.
             </p>
           </div>
 

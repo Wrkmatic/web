@@ -9,23 +9,22 @@ const SolutionSection = () => {
         <div className="solution__inner reveal" ref={ref}>
 
           <h2 className="solution__headline">
-            This is where Wrkmatic comes in.
+            How we actually build it.
           </h2>
 
           <div className="solution__body">
             <p>
-              We sit down with you, learn your business, and build exactly what you
-              need — nothing more, nothing less.
+              At Wrkmatic, we start with a call to understand what your business
+              does and where it breaks down. No pitch decks. No pre-built demos.
             </p>
             <p>
-              Custom AI automation that cuts out the manual work. CRMs that fit your
-              sales process like they were always meant to. Lead generation systems
-              that bring the right people to your door.
+              Then we scope tightly — one system, one problem, one clear outcome.
+              Everything is built from scratch around your process, not forced
+              around a template.
             </p>
             <p>
-              Everything we build is yours. Designed around your workflow, your
-              team, your goals. And priced so it actually makes sense for a growing
-              business.
+              Everything we ship is yours. Clean code. Full ownership. Priced so it
+              makes sense for a business that's still proving itself out.
             </p>
           </div>
 

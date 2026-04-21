@@ -39,7 +39,12 @@ const Navbar = () => {
             onClick={closeMenu}
             aria-label="Wrkmatic — home"
           >
-            Wrkmatic
+            <img
+              src={`${import.meta.env.BASE_URL}wrkmatic-logo.png`}
+              alt="Wrkmatic"
+              title="Wrkmatic"
+              className="navbar__logo-img"
+            />
           </Link>
 
           {/* Desktop navigation */}

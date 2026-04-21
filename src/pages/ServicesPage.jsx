@@ -334,8 +334,9 @@ const ServicesPage = () => {
             What we build — and how we build it.
           </h1>
           <p className="page-hero__sub page-hero__sub--dark">
-            Every project starts with understanding your business. What we build
-            after that depends entirely on what you need.
+            The label matters less than what you're actually trying to fix.
+            We'll work out which of these you need — or whether you need a mix —
+            on the first call.
           </p>
         </div>
       </section>

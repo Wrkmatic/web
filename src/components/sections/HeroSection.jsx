@@ -6,20 +6,19 @@ const HeroSection = () => (
 
       {/* Headline — light weight, large, fades up */}
       <h1 className="hero__headline hero-animate hero-animate--d2">
-        Built for your business.{' '}
+        Stop paying for software{' '}
         <br />
-        Not someone else's.
+        that doesn't fit.
       </h1>
 
       {/* Subheadline — semibold */}
       <p className="hero__subheadline hero-animate hero-animate--d3">
-        We build what your business actually needs. Then we automate it.
+        We build CRMs, AI workflows, and integrations around your operations — not the other way around.
       </p>
 
       {/* Supporting line */}
       <p className="hero__supporting hero-animate hero-animate--d3">
-        Custom AI Automations, lead generation and tailor-made softwate. All designed around
-        how you work.
+        No Salesforce bloat. No shelfware. Just systems that do the job.
       </p>
 
       {/* CTA group */}
