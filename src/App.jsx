@@ -23,7 +23,7 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <BrowserRouter basename="/web/">
+    <BrowserRouter>
       <ScrollToTop />
       <Navbar />
       <Routes>
