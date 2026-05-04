@@ -1,5 +1,20 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/blog/:path*",
+      "destination": "https://auth.wryko.com/functions/v1/public-seo/wrkmatic/blog/:path*"
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "https://auth.wryko.com/functions/v1/public-seo/wrkmatic/sitemap.xml"
+    },
+    {
+      "source": "/llms.txt",
+      "destination": "https://auth.wryko.com/functions/v1/public-seo/wrkmatic/llms.txt"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "https://auth.wryko.com/functions/v1/public-seo/wrkmatic/robots.txt"
+    }
   ]
 }
