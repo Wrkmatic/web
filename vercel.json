@@ -15,6 +15,10 @@
     {
       "source": "/robots.txt",
       "destination": "https://auth.wryko.com/functions/v1/public-seo/wrkmatic/robots.txt"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
