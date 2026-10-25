@@ -21,9 +21,10 @@ function ScrollToTop() {
   return null;
 }
 
-function App() {
+/** The pages without their router: the browser wraps them in one, the pre-render in another. */
+export function AppRoutes() {
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <Navbar />
       <Routes>
@@ -33,6 +34,14 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppRoutes />
     </BrowserRouter>
   );
 }
