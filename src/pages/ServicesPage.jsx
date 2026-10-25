@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import useScrollAnimation from '../hooks/useScrollAnimation';
+import { headingFor } from '../seo';
 
 const SERVICES = [
   {
@@ -331,7 +332,7 @@ const ServicesPage = () => {
         <div className="container">
           <span className="label page-hero__label">Services</span>
           <h1 className="page-hero__headline page-hero__headline--dark">
-            What we build — and how we build it.
+            {headingFor('/services', 'What we build — and how we build it.')}
           </h1>
           <p className="page-hero__sub page-hero__sub--dark">
             The label matters less than what you're actually trying to fix.

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
+import { headingFor } from '../seo';
 
 const CALENDLY_URL = 'https://calendly.com/wrkmatic';
 const CALENDLY_SCRIPT = 'https://assets.calendly.com/assets/external/widget.js';
@@ -89,7 +90,7 @@ const ContactPage = () => {
 
           <div className="contact-actions__intro">
             <span className="label contact-actions__eyebrow">Contact</span>
-            <h1 className="contact-actions__title">Get in touch.</h1>
+            <h1 className="contact-actions__title">{headingFor('/contact', 'Get in touch.')}</h1>
             <p className="contact-actions__lede">
               Two ways to start — book a call or send a message. Either way, no
               pitch, no pressure.

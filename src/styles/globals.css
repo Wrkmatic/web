@@ -1200,3 +1200,42 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .hero__cta-group { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .testimonials-grid { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   SEO PAGES (src/pages/SeoPage.jsx, BlogPage.jsx)
+   Pages and posts the SEO team publishes: one readable column.
+   ============================================================ */
+
+.seo-article-section { background-color: #fff; }
+.seo-article { max-width: 68ch; color: var(--text-secondary); font-size: var(--text-body); line-height: var(--leading-body); }
+.seo-article > * + * { margin-top: 1rem; }
+.seo-article h2,
+.seo-article h3,
+.seo-article h4 {
+  font-family: var(--font-display);
+  color: var(--text-primary);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  font-weight: 600;
+}
+.seo-article h2 { font-size: var(--text-h3); margin-top: 2.5rem; }
+.seo-article h3 { font-size: 1.125rem; margin-top: 1.75rem; }
+.seo-article h4 { font-size: var(--text-body); margin-top: 1.5rem; }
+.seo-article strong { color: var(--text-primary); font-weight: 600; }
+.seo-article a { color: var(--accent-blue); text-decoration: underline; text-underline-offset: 2px; }
+.seo-article ul,
+.seo-article ol { padding-left: 1.25rem; }
+.seo-article ul { list-style: disc; }
+.seo-article ol { list-style: decimal; }
+.seo-article li + li { margin-top: 0.375rem; }
+.seo-article blockquote { border-left: 2px solid rgba(0,0,0,0.12); padding-left: 1rem; color: var(--text-muted); }
+
+.seo-post-list { max-width: 68ch; display: flex; flex-direction: column; gap: 2rem; }
+.seo-post-list__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: var(--tracking-tight);
+}
+.seo-post-list p { margin-top: 0.5rem; color: var(--text-secondary); line-height: var(--leading-body); }

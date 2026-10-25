@@ -1,14 +1,20 @@
 import { Link } from 'react-router-dom';
 
+import { headingFor } from '../../seo';
+
 const HeroSection = () => (
   <section className="hero" aria-label="Hero">
     <div className="container hero__inner">
 
       {/* Headline — light weight, large, fades up */}
       <h1 className="hero__headline hero-animate hero-animate--d2">
-        Stop paying for software{' '}
-        <br />
-        that doesn't fit.
+        {headingFor('/', (
+          <>
+            Stop paying for software{' '}
+            <br />
+            that doesn't fit.
+          </>
+        ))}
       </h1>
 
       {/* Subheadline — semibold */}

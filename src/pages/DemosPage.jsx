@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 import ImagePlaceholder from '../components/placeholders/ImagePlaceholder';
+import { headingFor } from '../seo';
 
 // Placeholder demo cards — replace with real video walkthroughs
 const DEMOS = [
@@ -57,7 +58,7 @@ const DemosPage = () => {
         <div className="container">
           <span className="label page-hero__label">Demos & Testimonials</span>
           <h1 className="page-hero__headline page-hero__headline--dark">
-            See what we've built. Hear from the businesses we've built it for.
+            {headingFor('/demos', "See what we've built. Hear from the businesses we've built it for.")}
           </h1>
           <p className="page-hero__sub page-hero__sub--dark">
             Real systems, real businesses, real outcomes. Here's what we shipped

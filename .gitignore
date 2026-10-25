@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Written at each build by scripts/seo-published.mjs
+src/seo-published.json
